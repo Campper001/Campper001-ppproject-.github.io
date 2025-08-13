@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>เลือกมหาวิทยาลัย</title>
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    img {
+      width: 100px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>เลือกมหาวิทยาลัย:</h2>
+
+  <form id="universityForm">
+    <select id="universitySelect" required>
+      <option value="">-- เลือกมหาวิทยาลัย --</option>
+      <option value="Nu">มหาวิทยาลัยนเรศวร</option>
+      <option value="chula">จุฬาลงกรณ์มหาวิทยาลัย</option>
+      <option value="Cmu">มหาวิทยาลัยเชียงใหม่</option>
+    </select>
+    <br /><br />
+    <button type="submit">แสดงโลโก้</button>
+  </form>
+
+  <div class="card">
+    <h3 id="universityName">ยังไม่เลือก</h3>
+    <img id="universityLogo" src="" alt="" style="display: none;" />
+  </div>
+
+  <script>
+    const form = document.getElementById('universityForm');
+    const select = document.getElementById('universitySelect');
+    const nameEl = document.getElementById('universityName');
+    const logoEl = document.getElementById('universityLogo');
+
+    const universityData = {
+      Nu: {
+        name: 'มหาวิทยาลัยนเรศวร',
+        logo: 'imgu/Nu.png'
+      },
+      chula: {
+        name: 'จุฬาลงกรณ์มหาวิทยาลัย',
+        logo: 'imgu/chula.png'
+      },
+      Cmu: {
+        name: 'มหาวิทยาลัยเชียงใหม่',
+        logo: 'imgu/Cmu.png'
+      }
+    };
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // กันหน้ารีเฟรช
+      const selected = select.value;
+
+      if (universityData[selected]) {
+        nameEl.textContent = universityData[selected].name;
+        logoEl.src = universityData[selected].logo;
+        logoEl.style.display = 'block';
+      } else {
+        nameEl.textContent = 'ยังไม่เลือก';
+        logoEl.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

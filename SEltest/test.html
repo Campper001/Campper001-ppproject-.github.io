@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+<body>
+  <table class="table-auto border-collapse w-full text-center">
+  <thead>
+    <tr class="bg-gray-100 font-bold">
+      <th class="border px-4 py-2">ปี</th>
+      <th class="border px-4 py-2">รอบ</th>
+      <th class="border px-4 py-2">สูงสุด</th>
+      <th class="border px-4 py-2">ต่ำสุด</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border px-4 py-2" rowspan="2">67</td>
+      <td class="border px-4 py-2 text-orange-500 font-semibold">ครั้งที่ 2</td>
+      <td class="border px-4 py-2">53.47</td>
+      <td class="border px-4 py-2">49.13</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2 text-orange-500 font-semibold">ครั้งที่ 1</td>
+      <td class="border px-4 py-2">53.47</td>
+      <td class="border px-4 py-2">49.13</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+    .custom-td {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .top-content {
+        font-weight: bold;
+        font-size: 1.25rem; /* ปรับขนาดตัวเลขให้ใหญ่ */
+        color: #f97316; /* สีส้มเหมือนในภาพ */
+    }
+    .bottom-content {
+        font-size: 0.75rem; /* ขนาดตัวอักษรเล็กสำหรับข้อความ */
+        color: #f97316; /* สีส้มเหมือนในภาพ */
+    }
+</style>
+</body>
+</html>

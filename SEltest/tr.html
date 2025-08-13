@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ตัวอย่างตาราง</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f3f4f6;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #fef3c7;
+    }
+  </style>
+</head>
+<body>
+  <h2>ข้อมูลนักเรียน</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>ลำดับ</th>
+        <th>ชื่อ</th>
+        <th>คะแนน</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>สมชาย</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>สมหญิง</td>
+        <td>95</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
